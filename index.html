@@ -88,7 +88,6 @@ if(liff.getContext().type !== "none"){
     "type" : "sticker",
     "stickerId" : 1,
     "packageId" : 1
-    /*บรรจุได้สูงสุด5อัน*/
   }])
   alert("Message sent")
 }
@@ -146,20 +145,3 @@ if(liff.getContext().type !== "none"){
   </script>
 </body>
 </html>
-
-
-/*ปัจจุบันค่าของ liff.getContext().type จะมีด้วยกัน 5 รูปแบบ
-
-utou คือการเปิด LIFF จากห้องแชทแบบ 1-on-1
-group คือการเปิด LIFF จากห้องแชทแบบ Group
-room คือการเปิด LIFF จากห้องแชทแบบ Room
-external คือการเปิด LIFF ใน External browser
-none คือ การเปิด LIFF จากแหล่งอื่นๆ*/
-/*
-เนื่องจากการส่งข้อความจาก LIFF กลับไปยังห้องแขท จะสามารถทำได้ในกรณีที่ LIFF ถูกเปิดขึ้นมาจากห้องแชทเท่านั้น ดังนั้นเราควรตรวจสอบค่าของ liff.getContext().type ก่อน เพื่อให้แน่ใจว่า LIFF ดังกล่าวถูกเปิดจากห้องแชทจริงๆ
-
-if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
-    // Send messages here.
-}
-*/
-/*เนื่องจากปัญหาทางเทคนิค LINE บน iOS ตั้งแต่ version 9.19.0 เป็นต้นไปจะไม่สามารถเรียกใช้ฟังก์ชั่นได้ (QR code) ถ้ามีการเปลี่ยนแปลงผมจะรีบมาแจ้งให้ทราบทันทีครับ (สำหรับ Android ยังใช้ได้อยู่เหมือนเดิมครับ)*/
