@@ -45,15 +45,25 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     function createUniversalLink() {
-
+const link1 = liff.permanentLink.createUrl()
+document.getElementById("universalLink1").append(link1)
+liff.permanentLink.setExtraQueryParan('param=9')
+const link2 = liff.permanentLink.createUrl()
+document.getElementById("universalLink2").append(link2)
     }
 
     async function shareMsg() {
-
+await liff.shareTragetPicker([
+  {
+    "type" : "text",
+    "text" : "share traget picker"
+  }
+])
     }
 
     function logOut() {
-
+liff.logout()
+window.location.reload()
     }
 
     function closed() {
@@ -135,11 +145,12 @@ if(liff.getContext().type !== "none"){
       getUserProfile()
       getContext()
      getFriendship()
+     createUniversalLink()
       } else {
         liff.login()
       }
       
-      // createUniversalLink()
+    
     }
     main()
   </script>
